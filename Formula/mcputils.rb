@@ -5,21 +5,21 @@
 class Mcputils < Formula
   desc "CLI to manage MCP server configs and profiles for Claude Code"
   homepage "https://github.com/zeshanziya/mcputils"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.2/mcputils_darwin_amd64.tar.gz"
-      sha256 "34898f40555171e5b282911f2bdea6278f89b19d13a9e07c94c502d9d0d2e50c"
+      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.3/mcputils_darwin_amd64.tar.gz"
+      sha256 "13fae086886651c9ce8a805ad47e7fdbdddc0ec0c0bddd6e95154d334a7cc37f"
 
       define_method(:install) do
         bin.install "mcputils"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.2/mcputils_darwin_arm64.tar.gz"
-      sha256 "2d701159abdc2587d7a7c33b35c3ba4a8e246be5d1e720a9ab5af6cec750a403"
+      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.3/mcputils_darwin_arm64.tar.gz"
+      sha256 "93476e85f5ac34f02376b5eaff780dda2fb98c43076f1ec4673e9d92119bcbf9"
 
       define_method(:install) do
         bin.install "mcputils"
@@ -29,15 +29,15 @@ class Mcputils < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.2/mcputils_linux_amd64.tar.gz"
-      sha256 "cba2b67b2b22ffdc5ea9dc2c68e8de8fb97fd0acfbdcc28de9cfe80995cae606"
+      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.3/mcputils_linux_amd64.tar.gz"
+      sha256 "a52d21050a942ee7c029cd92f8f6fccae321f4bd053e0798987190684355cbb1"
       define_method(:install) do
         bin.install "mcputils"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.2/mcputils_linux_arm64.tar.gz"
-      sha256 "8bf6d51c209b91eb4beff1879074dc36540ce58f10b9be61809a51c2404231c8"
+      url "https://github.com/zeshanziya/mcputils/releases/download/v0.2.3/mcputils_linux_arm64.tar.gz"
+      sha256 "4d7f8e9a82f5353253d254c9a8f4a0d2e3137bea00c298c279b1a5b5bdeb952c"
       define_method(:install) do
         bin.install "mcputils"
       end
